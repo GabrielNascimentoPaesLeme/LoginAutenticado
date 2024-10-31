@@ -86,7 +86,7 @@ O servidor deve rodar em `http://localhost:3000`.
 No diretório `frontend`, inicie o front-end com:
 
 ```bash
-npm start
+npm run dev
 ```
 
 O front-end estará acessível em `http://localhost:5173`.
