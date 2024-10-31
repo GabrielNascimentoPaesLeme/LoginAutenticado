@@ -52,7 +52,6 @@ const loginReducer = (state, action) => {
     case "REGISTER":
       return {
         ...state,
-        isAuthenticated: true,
         user: action.payload,
       };
     default:
