@@ -10,7 +10,7 @@ const Home = () => {
   const typedRef1 = useRef(null);
   const user = JSON.parse(localStorage.getItem("user"));
   const username = Object.values(user);
-  const {state} = useContext(ContextUser)
+  const { state } = useContext(ContextUser);
   const navigate = useNavigate();
 
   useEffect(() => {

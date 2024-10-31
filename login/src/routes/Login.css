@@ -5,10 +5,6 @@
   right: 0;
   color: #fff;
   text-align: center;
-  font-family: Lato;
-  font-weight: 300;
-  letter-spacing: 7px;
-  width: 30%;
   padding: 10px;
   margin: 0 auto;
   background-color: #364c7554;
@@ -18,11 +14,15 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+  width: 90%;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-family: Lato;
 }
 
 .container-login h2 {
-  margin-top: 10px;
-  font-size: 2.5rem;
+  margin-top: 5px;
+  font-size: 1.8rem;
 }
 
 form {
@@ -31,11 +31,6 @@ form {
   flex-direction: column;
   margin-bottom: 20px;
   gap: 2px;
-}
-
-.form-label {
-  font-size: 1.5rem;
-  font-weight: 400;
 }
 
 form .buttons {
@@ -48,8 +43,6 @@ form .buttons {
 
 form .buttons p {
   margin-bottom: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: normal;
   font-size: 0.9rem;
 }
 
@@ -62,4 +55,68 @@ form .buttons .btn {
   font-size: 1.1rem;
   margin-top: 5px;
   width: 45%;
+}
+
+@media screen and (min-width: 764px){
+  .container-login{
+    width: 50%;
+    
+  }
+
+  form{
+    gap: 20px;
+  }
+
+  form .buttons{
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1020px){
+  .container-login{
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container-login {
+    letter-spacing: 7px;
+    width: 30%;
+  }
+
+  .container-login h2 {
+    margin-top: 10px;
+    font-size: 2.5rem;
+  }
+
+  
+
+  .form-label {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  form .buttons p {
+    letter-spacing: 2px;
+  }
+
+}
+
+@media screen and (min-width: 1430px){
+  .container-login{
+    gap: 40px;
+  }
+
+  form{
+    gap: 20px;
+    font-size: 2rem;
+  }
+
+  .form-control{
+    font-size: 1.3rem;
+  }
+
+  form .buttons p{
+    font-size: 1rem;
+  } 
 }

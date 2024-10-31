@@ -5,7 +5,7 @@ import { ContextUser } from "../context/UserContext";
 import "./Register.css";
 
 const Register = () => {
-  const emailRegex = /\S+@\S+\.\S+/
+  const emailRegex = /\S+@\S+\.\S+/;
   const { register, dispatch } = useContext(ContextUser);
 
   const navigate = useNavigate();
@@ -26,10 +26,10 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Dados do registro:", formRegisterData);
-    const validEmail = emailRegex.test(formRegisterData.email)
-    console.log(formRegisterData.email)
-    console.log(validEmail)
-    if (validEmail){
+    const validEmail = emailRegex.test(formRegisterData.email);
+    console.log(formRegisterData.email);
+    console.log(validEmail);
+    if (validEmail) {
       register(dispatch, formRegisterData);
       navigate("/");
     }
