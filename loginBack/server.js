@@ -14,7 +14,7 @@ const prisma = new PrismaClient()
 // Middleware para o Express
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:5173'
+  origin: 'https://login-autenticado-robk.vercel.app/'
 }));
 
 async function connectToDatabase() {
