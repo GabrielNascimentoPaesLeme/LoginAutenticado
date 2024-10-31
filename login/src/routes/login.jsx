@@ -1,10 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { ContextUser } from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const login = () => {
-  const { login, dispatch } = useContext(ContextUser);
+  const { login, dispatch, state } = useContext(ContextUser);
 
   const [userData, setUserData] = useState({
     username: "",
@@ -33,6 +33,11 @@ const login = () => {
     }
   };
 
+  useEffect(() => {
+    if (state.isAuthenticated) {
+      navigate("/home"); // ou qualquer rota desejada
+    }
+  }, [state.isAuthenticated, navigate]);
   return (
     <div className="container-login">
       <h2>Login</h2>
