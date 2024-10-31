@@ -1,13 +1,17 @@
 import React from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
 import Typed from "typed.js";
 import "./Home.css";
+import { ContextUser } from "../context/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const typedRef2 = useRef(null);
   const typedRef1 = useRef(null);
   const user = JSON.parse(localStorage.getItem("user"));
   const username = Object.values(user);
+  const {state} = useContext(ContextUser)
+  const navigate = useNavigate();
 
   useEffect(() => {
     const options1 = {
@@ -50,6 +54,12 @@ const Home = () => {
       typed2.destroy();
     };
   }, []);
+
+  useEffect(() => {
+    if (state.isAuthenticated) {
+      navigate("/home"); // ou qualquer rota desejada
+    }
+  }, [state.isAuthenticated, navigate]);
 
   return (
     <div id="title">
