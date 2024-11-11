@@ -55,13 +55,13 @@ const Home = () => {
     };
   }, []);
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (state.isAuthenticated) {
       navigate("/home"); // ou qualquer rota desejada
     }else {
       navigate('/')
     }
-  }, [state.isAuthenticated, navigate]);
+  }, [state.isAuthenticated, navigate]); */
 
   return (
     <div id="title">
