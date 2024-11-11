@@ -58,6 +58,8 @@ const Home = () => {
   useEffect(() => {
     if (state.isAuthenticated) {
       navigate("/home"); // ou qualquer rota desejada
+    }else {
+      navigate('/')
     }
   }, [state.isAuthenticated, navigate]);
 
